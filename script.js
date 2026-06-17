@@ -278,12 +278,11 @@ function createButtonParticles() {
 // Enhanced Typing Animation
 const typingText = document.querySelector('.typing-text');
 const phrases = [
-    'Python Developer',
-    'Game Creator', 
-    'AI Enthusiast',
+    'DevOps Engineer',
+    'Cloud Enthusiast', 
+    'Backend Developer',
     'Problem Solver',
-    'Innovation Seeker',
-    'Gym Rat'
+    'System Administrator'
 ];
 
 let phraseIndex = 0;
@@ -592,12 +591,11 @@ function sendEmail(name, email, message, form) {
     submitBtn.innerHTML = 'Sending...';
     submitBtn.disabled = true;
     
-    // EmailJS send
     emailjs.send('service_wv98oq4', 'template_2096w1h', {
         from_name: name,
         from_email: email,
         message: message,
-        to_name: 'Paramjit Singh'
+        to_name: 'Shubham Singh Yadav'
     })
     .then(function(response) {
         showNotification('Message sent successfully!', 'success');

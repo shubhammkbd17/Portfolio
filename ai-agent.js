@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendBtn = document.getElementById('send-ai-message');
     const closeBtn = document.getElementById('close-ai-chat');
     
-    // Knowledge base about Paramjit
+    // Knowledge base about Shubham
     const knowledge = {
         skills: {
             programming: ['Python', 'JavaScript', 'C++', 'C', 'Java'],
@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
             background: 'NGO work and real-world problem solving'
         },
         contact: {
-            email: 'paramjit.offical34@gmail.com',
-            github: 'https://github.com/param20h',
-            linkedin: 'https://www.linkedin.com/in/param20h'
+            email: 'sybhu609@gmail.com',
+            github: 'https://github.com/shubhammkbd17',
+            linkedin: 'https://www.linkedin.com/in/shubham-singh-yadav-262992274'
         }
     };
     
@@ -53,55 +53,55 @@ document.addEventListener('DOMContentLoaded', function() {
         // Skills questions
         if (message.includes('skill') || message.includes('technology') || message.includes('programming')) {
             const allSkills = [...knowledge.skills.programming, ...knowledge.skills.web, ...knowledge.skills.ai];
-            return `🚀 Paramjit is skilled in: ${allSkills.slice(0, 6).join(', ')} and more! He's particularly strong in Python, AI/ML, and Web3 development. Want to know about a specific technology?`;
+            return `🚀 Shubham is skilled in: ${allSkills.slice(0, 6).join(', ')} and more! He's particularly strong in DevOps, Cloud, and CI/CD pipelines. Want to know about a specific technology?`;
         }
         
         // Python specific
         if (message.includes('python')) {
-            return `🐍 Python is Paramjit's strongest language! He's built AI systems, games with Pygame, and data analysis tools. His Python skills include ML, web development, and automation.`;
+            return `⚙️ Python, C++, and Java are Shubham's strongest languages! He's built tools like Vgram with Python and CustomTkinter. His skills include DevOps automation, scripting, and backend development.`;
         }
         
         // AI/ML questions
         if (message.includes('ai') || message.includes('machine learning') || message.includes('ml')) {
-            return `🧠 Paramjit is passionate about AI! He's developed an AI Financial Identification System for the Indian Department of Posts using TensorFlow and machine learning algorithms.`;
+            return `☁️ Shubham is passionate about Cloud and DevOps! He creates automated CI/CD pipelines and uses tools like Docker and Jenkins to streamline deployments.`;
         }
         
         // Projects questions
         if (message.includes('project') || message.includes('work') || message.includes('portfolio')) {
-            return `💼 Paramjit's key projects include:\n• AI Financial System for Indian Postal Service\n• Python Space Invaders Game\n• Upcoming Web3 Unity Game\nEach showcases different skills from AI to game development!`;
+            return `💼 Shubham's key projects include:\n• TaskFlow Management App (MERN)\n• Vgram Process Manager (Python)\n• Music Streaming UI\nEach showcases different skills from full-stack to system programming!`;
         }
         
         // Experience questions
         if (message.includes('experience') || message.includes('background')) {
-            return `📈 Paramjit has 2+ years of development experience, focusing on Web3 game development and AI solutions. He's worked with NGOs and specializes in solving real-world problems with technology.`;
+            return `📈 Shubham is a CSE candidate at Lovely Professional University. He has experience working with modern DevOps tools and containerizing applications.`;
         }
         
         // Contact questions
         if (message.includes('contact') || message.includes('hire') || message.includes('email')) {
-            return `📧 You can reach Paramjit at paramjit.offical34@gmail.com or connect on LinkedIn. He's available for remote work and exciting projects!`;
+            return `📧 You can reach Shubham at sybhu609@gmail.com or connect on LinkedIn. He's available for remote work and exciting projects!`;
         }
         
         // Web3/Blockchain questions
         if (message.includes('web3') || message.includes('blockchain') || message.includes('crypto')) {
-            return `⛓️ Paramjit is developing Web3 solutions! He's working on a Unity-based Web3 game that combines blockchain technology with immersive gaming experiences.`;
+            return `🔗 Shubham is currently focusing on DevOps and building modern, automated deployment pipelines!`;
         }
         
         // Game development questions
         if (message.includes('game') || message.includes('unity') || message.includes('pygame')) {
-            return `🎮 Paramjit loves game development! He's created a Space Invaders game with Pygame and is developing an innovative Web3 game with Unity. Gaming + blockchain = future!`;
+            return `🔧 Shubham enjoys system programming! He uses C/C++ and has built process monitoring tools.`;
         }
         
         // General questions
         if (message.includes('who') || message.includes('about')) {
-            return `👨‍💻 Paramjit Singh is a passionate developer specializing in Web3, AI, and game development. He combines technical skills with real-world problem-solving experience!`;
+            return `👨‍💻 Shubham Singh Yadav is a passionate developer specializing in DevOps, Cloud, and Software Engineering. He combines technical skills with automation!`;
         }
         
         // Default response
         const responses = [
-            `🤔 That's an interesting question! Paramjit specializes in Python, AI, Web3, and game development. What specific area interests you?`,
-            `💡 I'd love to help! You can ask me about Paramjit's skills, projects, experience, or how to contact him.`,
-            `🚀 Paramjit is always working on exciting projects! Ask me about his AI systems, games, or Web3 development.`,
-            `🎯 Try asking about: Python skills, AI projects, Web3 games, or how to get in touch with Paramjit!`
+            `🤔 That's an interesting question! Shubham specializes in DevOps, Cloud, C++, and Python. What specific area interests you?`,
+            `💡 I'd love to help! You can ask me about Shubham's skills, projects, experience, or how to contact him.`,
+            `🚀 Shubham is always working on exciting projects! Ask me about his TaskFlow app, Vgram tool, or DevOps development.`,
+            `🎯 Try asking about: DevOps skills, CI/CD projects, Python development, or how to get in touch with Shubham!`
         ];
         
         return responses[Math.floor(Math.random() * responses.length)];

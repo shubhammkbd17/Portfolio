@@ -1,6 +1,6 @@
-// Real GitHub Stats for param20h
+// Real GitHub Stats for shubhammkbd17
 document.addEventListener('DOMContentLoaded', function() {
-    const username = 'param20h';
+    const username = 'shubhammkbd17';
     
     async function fetchGitHubStats() {
         try {
@@ -71,20 +71,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const total = sortedLanguages.reduce((sum, [,count]) => sum + count, 0);
         
+        const langIcons = {
+            'JavaScript': '<i class="fab fa-js" style="color: #F7DF1E; font-size: 3rem;" title="JavaScript"></i>',
+            'TypeScript': '<span style="color: #3178C6; font-size: 2.5rem; font-weight: bold; font-family: monospace;" title="TypeScript">TS</span>',
+            'Python': '<i class="fab fa-python" style="color: #3776AB; font-size: 3rem;" title="Python"></i>',
+            'HTML': '<i class="fab fa-html5" style="color: #E34F26; font-size: 3rem;" title="HTML"></i>',
+            'CSS': '<i class="fab fa-css3-alt" style="color: #1572B6; font-size: 3rem;" title="CSS"></i>',
+            'Java': '<i class="fab fa-java" style="color: #ED8B00; font-size: 3rem;" title="Java"></i>',
+            'C++': '<i class="fas fa-file-code" style="color: #00599C; font-size: 3rem;" title="C++"></i>',
+            'C': '<i class="fas fa-file-code" style="color: #555555; font-size: 3rem;" title="C"></i>',
+            'Dockerfile': '<i class="fab fa-docker" style="color: #2496ED; font-size: 3rem;" title="Dockerfile"></i>'
+        };
+
         const languagesList = document.getElementById('languages-list');
         if (languagesList) {
-            languagesList.innerHTML = sortedLanguages.map(([lang, count]) => {
-                const percentage = Math.round((count / total) * 100);
-                return `
-                    <div class="language-item">
-                        <span>${lang}</span>
-                        <div class="language-bar">
-                            <div class="language-progress" style="width: ${percentage}%"></div>
-                        </div>
-                        <span>${percentage}%</span>
-                    </div>
-                `;
-            }).join('');
+            languagesList.innerHTML = `
+                <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; padding: 2rem 0;">
+                    ${sortedLanguages.map(([lang]) => langIcons[lang] || `<span style="font-size: 1.2rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 20px;">${lang}</span>`).join('')}
+                </div>
+            `;
         }
     }
     
@@ -107,41 +112,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showFallbackStats() {
-        // Show demo data if API fails
-        animateCounter('repos-count', 15);
-        animateCounter('stars-count', 42);
-        animateCounter('forks-count', 8);
-        animateCounter('followers-count', 25);
+        // Show actual profile data when API fails due to rate limiting
+        animateCounter('repos-count', 14);
+        animateCounter('stars-count', 0);
+        animateCounter('forks-count', 0);
+        animateCounter('followers-count', 0);
         
         document.getElementById('languages-list').innerHTML = `
-            <div class="language-item">
-                <span>Python</span>
-                <div class="language-bar">
-                    <div class="language-progress" style="width: 85%"></div>
-                </div>
-                <span>85%</span>
-            </div>
-            <div class="language-item">
-                <span>JavaScript</span>
-                <div class="language-bar">
-                    <div class="language-progress" style="width: 70%"></div>
-                </div>
-                <span>70%</span>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; padding: 2rem 0;">
+                <i class="fab fa-js" style="color: #F7DF1E; font-size: 3rem;" title="JavaScript"></i>
+                <span style="color: #3178C6; font-size: 2.5rem; font-weight: bold; font-family: monospace;" title="TypeScript">TS</span>
+                <i class="fab fa-docker" style="color: #2496ED; font-size: 3rem;" title="Dockerfile"></i>
+                <i class="fab fa-html5" style="color: #E34F26; font-size: 3rem;" title="HTML"></i>
             </div>
         `;
         
-        document.getElementById('recent-repos').innerHTML = `
-            <div class="repo-item">
-                <div class="repo-name">AI-Financial-System</div>
-                <div class="repo-desc">AI-based financial identification system</div>
-                <div class="repo-lang">Python</div>
-            </div>
-            <div class="repo-item">
-                <div class="repo-name">Space-Invaders-Game</div>
-                <div class="repo-desc">Classic arcade game with Pygame</div>
-                <div class="repo-lang">Python</div>
-            </div>
-        `;
+        const recentRepos = document.getElementById('recent-repos');
+        if (recentRepos) {
+            recentRepos.innerHTML = `
+                <div class="repo-item">
+                    <div class="repo-name">Vgram1</div>
+                    <div class="repo-desc">No description available</div>
+                    <div class="repo-lang">TypeScript</div>
+                </div>
+                <div class="repo-item">
+                    <div class="repo-name">taskflow</div>
+                    <div class="repo-desc">No description available</div>
+                    <div class="repo-lang">JavaScript</div>
+                </div>
+                <div class="repo-item">
+                    <div class="repo-name">shubhammkbd17</div>
+                    <div class="repo-desc">Hello World! This is my profile</div>
+                    <div class="repo-lang">Unknown</div>
+                </div>
+            `;
+        }
     }
     
     // Setup refresh button
