@@ -1810,3 +1810,102 @@ body.light-mode {
         font-size: 1.5rem;
     }
 }
+/* Enhanced Certifications UI */
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cert-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.cert-issuer {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.2rem;
+}
+
+.cert-date {
+    font-size: 0.8rem;
+    color: #4ecdc4;
+    font-weight: 500;
+}
+
+/* Enhanced Achievements UI */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.achievement-item {
+    background: rgba(255, 107, 107, 0.03);
+    border-left: 4px solid #ff6b6b;
+    padding: 1.5rem 2rem;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    background: rgba(255, 107, 107, 0.08);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.1);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    color: #ff6b6b;
+}
+
+.achievement-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-date {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
